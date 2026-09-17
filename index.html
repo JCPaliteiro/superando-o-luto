@@ -2,470 +2,618 @@
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>João Carlos Paliteiro — Links</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sessão Temática de Divine Presence Healing — Superando o Luto, com João Carlos Paliteiro.">
+<title>Sessão "Superando o Luto"</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Cinzel:wght@500;600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg: #08091a;
-    --gold: #c9a96e;
-    --gold-light: #e2c48a;
-    --gold-dim: rgba(201,169,110,0.15);
-    --white-moon: #e8e8f5;
-    --lavender: #9999cc;
-    --lavender-dim: rgba(153,153,204,0.5);
-    --deep-blue: rgba(20,30,100,0.4);
+  :root{
+    --ink:#293C3A;
+    --ink-soft:#5B6E6C;
+    --ink-faint:#8FA09D;
+    --bg:#F8F5EC;
+    --bg-raised:#FFFFFF;
+    --gold:#C4A05C;
+    --gold-soft:#ECDBA9;
+    --gold-line: linear-gradient(180deg, rgba(196,160,92,.65), rgba(169,143,191,.5) 55%, rgba(111,160,172,.4));
+    --sky:#5E93A0;
+    --sage:#7DA06C;
+    --lilac:#A98FBF;
+    --line:#E4DEC9;
+    --shadow: 0 18px 48px -24px rgba(41,60,58,.25);
+    --radius: 18px;
+    --serif: "Cormorant Garamond", Georgia, "Iowan Old Style", serif;
+    --caps: "Cinzel", Georgia, serif;
+    --sans: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
 
-  html, body {
-    min-height: 100vh;
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#E8EEE9;
+      --ink-soft:#B9C6C2;
+      --ink-faint:#87A19C;
+      --bg:#1B2624;
+      --bg-raised:#22302E;
+      --gold:#D9B876;
+      --gold-soft:#6E5A34;
+      --gold-line: linear-gradient(180deg, rgba(217,184,118,.65), rgba(199,174,218,.55) 55%, rgba(143,194,206,.4));
+      --sky:#8FC2CE;
+      --sage:#A3C98E;
+      --lilac:#C7AEDA;
+      --line:#37464A;
+      --shadow: 0 18px 48px -20px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#E8EEE9;
+    --ink-soft:#B9C6C2;
+    --ink-faint:#87A19C;
+    --bg:#1B2624;
+    --bg-raised:#22302E;
+    --gold:#D9B876;
+    --gold-soft:#6E5A34;
+    --gold-line: linear-gradient(180deg, rgba(217,184,118,.65), rgba(199,174,218,.55) 55%, rgba(143,194,206,.4));
+    --sky:#8FC2CE;
+    --sage:#A3C98E;
+    --lilac:#C7AEDA;
+    --line:#37464A;
+    --shadow: 0 18px 48px -20px rgba(0,0,0,.55);
+  }
+
+  *{box-sizing:border-box;}
+  body{
     background: var(--bg);
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    color: var(--white-moon);
-    overflow-x: hidden;
+    color: var(--ink);
+    font-family: var(--sans);
+    padding-inline: 20px;
+    -webkit-font-smoothing: antialiased;
   }
-
-  /* ── BACKGROUND ── */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 70% 50% at 50% 0%, rgba(30,40,120,0.5) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 40% at 80% 80%, rgba(15,20,70,0.3) 0%, transparent 60%),
-      radial-gradient(ellipse 40% 60% at 20% 60%, rgba(80,40,120,0.08) 0%, transparent 60%);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  /* Stars */
-  body::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image:
-      radial-gradient(1.5px 1.5px at 8% 12%, rgba(201,169,110,0.7) 0%, transparent 100%),
-      radial-gradient(1px 1px at 92% 8%, rgba(180,160,240,0.5) 0%, transparent 100%),
-      radial-gradient(1px 1px at 15% 88%, rgba(201,169,110,0.4) 0%, transparent 100%),
-      radial-gradient(1.5px 1.5px at 85% 75%, rgba(180,160,240,0.4) 0%, transparent 100%),
-      radial-gradient(1px 1px at 45% 5%, rgba(255,255,255,0.2) 0%, transparent 100%),
-      radial-gradient(1px 1px at 72% 92%, rgba(201,169,110,0.3) 0%, transparent 100%),
-      radial-gradient(1px 1px at 30% 50%, rgba(255,255,255,0.12) 0%, transparent 100%),
-      radial-gradient(1.5px 1.5px at 60% 30%, rgba(180,160,240,0.3) 0%, transparent 100%),
-      radial-gradient(1px 1px at 5% 45%, rgba(201,169,110,0.25) 0%, transparent 100%),
-      radial-gradient(1px 1px at 95% 40%, rgba(255,255,255,0.15) 0%, transparent 100%);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .page {
-    position: relative;
-    z-index: 1;
-    max-width: 480px;
+  .wrap{
+    max-width: 700px;
     margin: 0 auto;
-    padding: 48px 24px 64px;
+    padding-block: 56px 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0;
+    gap: 64px;
   }
 
-  /* ── AVATAR ── */
-  .avatar-ring {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    padding: 2px;
-    background: linear-gradient(135deg, var(--gold), rgba(201,169,110,0.3), var(--gold));
-    margin-bottom: 20px;
-    animation: fadeUp 0.8s ease both;
-  }
-  .avatar-inner {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #1a1f4a, #0d1030);
-    display: flex;
+  /* ---------- Hero ---------- */
+  .hero{
+    position: relative;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-family: 'Cinzel', serif;
-    font-size: 28px;
-    color: var(--gold);
-    letter-spacing: 2px;
-    overflow: hidden;
+    gap: 18px;
+    padding-block: 28px 8px;
   }
-  .avatar-inner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:-60px; left:50%;
+    width:520px; height:340px;
+    transform: translateX(-50%);
+    background: radial-gradient(closest-side, rgba(196,160,92,.16), rgba(196,160,92,0) 70%);
+    z-index:-1;
+    animation: breathe 9s ease-in-out infinite;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    bottom:-70px; left:50%;
+    width:460px; height:300px;
+    transform: translateX(-38%);
+    background: radial-gradient(closest-side, rgba(169,143,191,.14), rgba(169,143,191,0) 70%);
+    z-index:-1;
+    animation: breathe 11s ease-in-out infinite 1.5s;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .hero::before{
+      background: radial-gradient(closest-side, rgba(216,182,118,.14), rgba(216,182,118,0) 70%);
+    }
+    :root:not([data-theme="light"]) .hero::after{
+      background: radial-gradient(closest-side, rgba(199,174,218,.13), rgba(199,174,218,0) 70%);
+    }
+  }
+  :root[data-theme="dark"] .hero::before{
+    background: radial-gradient(closest-side, rgba(216,182,118,.14), rgba(216,182,118,0) 70%);
+  }
+  :root[data-theme="dark"] .hero::after{
+    background: radial-gradient(closest-side, rgba(199,174,218,.13), rgba(199,174,218,0) 70%);
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero::before, .hero::after{ animation: none; }
+  }
+  @keyframes breathe{
+    0%,100%{ opacity:.7; }
+    50%{ opacity:1; }
   }
 
-  /* ── HEADER ── */
-  .name {
-    font-family: 'Cinzel', serif;
-    font-size: 18px;
+  .eyebrow{
+    font-family: var(--caps);
+    font-size: 15px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--sky);
     font-weight: 600;
-    color: var(--gold-light);
-    letter-spacing: 2px;
-    text-align: center;
-    animation: fadeUp 0.8s 0.1s ease both;
-    margin-bottom: 6px;
   }
-  .subtitle {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 14px;
+  h1{
+    font-family: var(--serif);
     font-style: italic;
-    color: var(--lavender);
-    letter-spacing: 1px;
-    text-align: center;
-    animation: fadeUp 0.8s 0.2s ease both;
-    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: clamp(40px, 9vw, 68px);
+    line-height: 1.05;
+    margin: 0;
+    color: var(--ink);
+    max-width: 14ch;
   }
-  .tagline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px;
-    color: rgba(232,232,245,0.5);
-    text-align: center;
-    letter-spacing: 0.5px;
-    animation: fadeUp 0.8s 0.3s ease both;
-    margin-bottom: 32px;
-  }
-
-  /* ── DIVIDER ── */
-  .divider {
-    width: 80px;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--gold), transparent);
-    margin: 0 auto 32px;
-    animation: fadeUp 0.8s 0.35s ease both;
+  .subhead{
+    font-family: var(--serif);
+    font-size: clamp(19px, 3vw, 22px);
+    color: var(--ink-soft);
+    max-width: 34ch;
+    line-height: 1.5;
+    margin: 0;
   }
 
-  /* ── SECTION LABEL ── */
-  .section-label {
-    font-family: 'Cinzel', serif;
-    font-size: 10px;
-    letter-spacing: 4px;
-    color: rgba(153,153,204,0.5);
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 14px;
-    width: 100%;
+  /* ---------- Poetic passage ---------- */
+  .passage{
+    display:flex;
+    gap: 22px;
   }
-
-  /* ── LINK BUTTONS ── */
-  .links-group {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 32px;
-  }
-
-  .link-btn {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    width: 100%;
-    padding: 16px 20px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(201,169,110,0.2);
-    border-radius: 4px;
-    text-decoration: none;
-    color: var(--white-moon);
-    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-
-  .link-btn::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(201,169,110,0.08), rgba(201,169,110,0.02));
-    opacity: 0;
-    transition: opacity 0.35s;
-  }
-
-  .link-btn:hover {
-    border-color: rgba(201,169,110,0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(201,169,110,0.1);
-  }
-  .link-btn:hover::before { opacity: 1; }
-  .link-btn:active { transform: translateY(0); }
-
-  /* Highlight button (CTA principal) */
-  .link-btn.highlight {
-    background: linear-gradient(135deg, rgba(201,169,110,0.12), rgba(201,169,110,0.04));
-    border-color: rgba(201,169,110,0.4);
-  }
-  .link-btn.highlight:hover {
-    border-color: var(--gold);
-    box-shadow: 0 8px 40px rgba(201,169,110,0.15), 0 0 0 1px rgba(201,169,110,0.2);
-  }
-
-  .btn-icon {
-    font-size: 20px;
-    width: 28px;
-    text-align: center;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 1;
-  }
-
-  .btn-text {
-    flex: 1;
-    position: relative;
-    z-index: 1;
-  }
-  .btn-title {
-    font-family: 'Cinzel', serif;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 1.5px;
-    color: var(--gold-light);
-    display: block;
-    margin-bottom: 2px;
-  }
-  .btn-desc {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px;
-    font-style: italic;
-    color: rgba(232,232,245,0.55);
-    display: block;
-    letter-spacing: 0.3px;
-  }
-  .btn-arrow {
-    font-size: 14px;
-    color: rgba(201,169,110,0.4);
-    position: relative;
-    z-index: 1;
-    transition: transform 0.3s, color 0.3s;
-  }
-  .link-btn:hover .btn-arrow {
-    transform: translateX(4px);
-    color: var(--gold);
-  }
-
-  /* Urgency tag */
-  .urgency-tag {
-    font-family: 'Cinzel', serif;
-    font-size: 9px;
-    letter-spacing: 2px;
-    color: var(--gold);
-    background: rgba(201,169,110,0.1);
-    border: 1px solid rgba(201,169,110,0.3);
-    padding: 2px 8px;
+  .passage .rule{
+    flex: 0 0 2px;
+    width: 2px;
+    background: var(--gold-line);
     border-radius: 2px;
-    position: absolute;
-    top: 10px;
-    right: 14px;
-    text-transform: uppercase;
+    margin-top: 4px;
   }
-
-  /* ── SOCIAL ROW ── */
-  .social-row {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 40px;
-    animation: fadeUp 0.8s 0.9s ease both;
+  .passage .text{
+    display:flex;
+    flex-direction: column;
+    gap: 22px;
   }
-
-  .social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px 18px;
-    background: transparent;
-    border: 1px solid rgba(201,169,110,0.2);
-    border-radius: 30px;
-    text-decoration: none;
-    color: var(--lavender);
-    font-family: 'Cinzel', serif;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    transition: all 0.3s;
+  .passage p{
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    max-width: 56ch;
   }
-  .social-btn:hover {
-    border-color: rgba(201,169,110,0.5);
-    color: var(--gold-light);
-    background: rgba(201,169,110,0.05);
-  }
-  .social-icon { font-size: 15px; }
-
-  /* ── FOOTER ── */
-  .footer {
-    text-align: center;
-    animation: fadeUp 0.8s 1s ease both;
-  }
-  .footer-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 14px;
+  .passage .revelation{
+    font-family: var(--serif);
     font-style: italic;
-    color: rgba(153,153,204,0.5);
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
+    font-size: 23px;
+    line-height: 1.5;
+    color: var(--ink);
   }
-  .footer-copy {
-    font-family: 'Cinzel', serif;
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: rgba(201,169,110,0.25);
+  .passage .attrib-quote{
+    font-family: var(--caps);
+    font-size: 14px;
+    letter-spacing: .12em;
     text-transform: uppercase;
+    color: var(--sky);
+    font-weight: 600;
+  }
+  .passage .invite{
+    color: var(--ink);
+  }
+  .passage .blessing{
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--sky);
+    font-size: 24px;
   }
 
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
+  /* ---------- Divider ---------- */
+  .divider{
+    display:flex;
+    align-items:center;
+    gap: 14px;
+    color: var(--gold);
+  }
+  .divider::before,
+  .divider::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background: var(--line);
+  }
+  .divider span{ font-size: 13px; }
+
+  /* ---------- Practical info ---------- */
+  .info{
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 32px clamp(20px, 5vw, 40px);
+    display:flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+  .info h2{
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0;
+    color: var(--ink);
+  }
+  .session-desc{
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+  }
+  .subblock{
+    display:flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .subblock .subsection-label{
+    font-size: 13.5px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--ink-faint);
+    font-weight: 600;
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .meta{
+    display:flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 140px;
+  }
+  .meta .label{
+    font-size: 13.5px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--ink-faint);
+    font-weight: 600;
+  }
+  .meta .value{
+    font-size: 17px;
+    color: var(--ink);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
   }
 
-  .link-btn:nth-child(1) { animation: fadeUp 0.7s 0.4s ease both; }
-  .link-btn:nth-child(2) { animation: fadeUp 0.7s 0.5s ease both; }
-  .link-btn:nth-child(3) { animation: fadeUp 0.7s 0.6s ease both; }
-  .link-btn:nth-child(4) { animation: fadeUp 0.7s 0.7s ease both; }
-  .link-btn:nth-child(5) { animation: fadeUp 0.7s 0.75s ease both; }
-  .link-btn:nth-child(6) { animation: fadeUp 0.7s 0.8s ease both; }
-  .section-label         { animation: fadeUp 0.7s 0.38s ease both; }
+  .format-toggle{
+    display:flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .format-toggle button{
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 11px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .format-toggle button[aria-pressed="true"]{
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--bg-raised);
+  }
+  .format-toggle button:focus-visible{
+    outline: 2px solid var(--sky);
+    outline-offset: 2px;
+  }
+
+  .launch-badge{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    font-family: var(--caps);
+    font-size: 12.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink);
+    background: linear-gradient(135deg, var(--gold-soft), rgba(169,143,191,.35));
+    padding: 7px 16px;
+    border-radius: 999px;
+  }
+  .price-line{
+    display:flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .price-line .amount-old{
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--ink-faint);
+    text-decoration: line-through;
+    font-variant-numeric: tabular-nums;
+  }
+  .price-line .amount{
+    font-family: var(--serif);
+    font-size: 34px;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .price-line .note{
+    font-size: 15px;
+    color: var(--ink-faint);
+  }
+  .launch-note{
+    margin: 0;
+    font-size: 14.5px;
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+  .package-note{
+    font-size: 15.5px;
+    color: var(--ink-faint);
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+  }
+
+  .cta{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .cta a.primary{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 16px;
+    color: #22302E;
+    background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+    padding: 15px 28px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 12px 30px -14px rgba(196,160,92,.55);
+    transition: transform .15s ease;
+  }
+  :root[data-theme="dark"] .cta a.primary{ color:#22302E; }
+  .cta a.primary:hover{ transform: translateY(-1px); }
+  .cta a.primary:focus-visible{
+    outline: 2px solid var(--sky);
+    outline-offset: 3px;
+  }
+  .cta .secondary{
+    font-size: 15px;
+    color: var(--ink-faint);
+  }
+  .cta .secondary a{
+    color: var(--sky);
+    text-decoration: underline;
+  }
+  .cta .microcopy{
+    font-size: 18px;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-family: var(--serif);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding-block: 8px 20px;
+  }
+  footer .cred{
+    font-size: 14.5px;
+    color: var(--ink-faint);
+    letter-spacing: .02em;
+  }
+  footer .sig{
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--ink);
+  }
+  footer .sig-sub{
+    font-family: var(--caps);
+    font-size: 14px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--sky);
+  }
+
+  @media (max-width: 480px){
+    .wrap{ padding-block: 40px 32px; gap: 48px; }
+    .info{ padding: 26px 18px; }
+    .cta{ align-items: stretch; }
+    .cta a.primary{ justify-content:center; }
+  }
+
+  /* ---------- Starfield (soft, ambient) ---------- */
+  .starfield{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .starfield .star{ animation: twinkle 7s ease-in-out infinite; }
+  .starfield .star.g{ fill: var(--gold); }
+  .starfield .star.l{ fill: var(--lilac); }
+  .starfield .star.s{ fill: var(--sage); }
+  @keyframes twinkle{
+    0%,100%{ opacity: .18; }
+    50%{ opacity: .5; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .starfield .star{ animation: none; opacity: .3; }
+  }
 </style>
 </head>
 <body>
-<div class="page">
 
-  <!-- AVATAR -->
-  <div class="avatar-ring">
-    <div class="avatar-inner">JCP</div>
-  </div>
 
-  <!-- HEADER -->
-  <div class="name">João Carlos Paliteiro</div>
-  <div class="subtitle">Canal da Luz Divina</div>
-  <div class="tagline">Spiritual Channel · Mentor · Beyond — Academia de Evolução Divina</div>
+<svg class="starfield" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+  <circle class="star g" cx="6"  cy="9"  r=".45" style="animation-delay:0s"/>
+  <circle class="star l" cx="18" cy="22" r=".3"  style="animation-delay:1.2s"/>
+  <circle class="star g" cx="32" cy="6"  r=".35" style="animation-delay:2.4s"/>
+  <circle class="star s" cx="47" cy="15" r=".28" style="animation-delay:.6s"/>
+  <circle class="star g" cx="61" cy="8"  r=".4"  style="animation-delay:3s"/>
+  <circle class="star l" cx="74" cy="20" r=".32" style="animation-delay:1.8s"/>
+  <circle class="star g" cx="88" cy="11" r=".38" style="animation-delay:.3s"/>
+  <circle class="star s" cx="93" cy="28" r=".26" style="animation-delay:2.1s"/>
+  <circle class="star l" cx="9"  cy="38" r=".3"  style="animation-delay:2.7s"/>
+  <circle class="star g" cx="25" cy="47" r=".26" style="animation-delay:1.5s"/>
+  <circle class="star s" cx="83" cy="42" r=".34" style="animation-delay:.9s"/>
+  <circle class="star g" cx="95" cy="55" r=".3"  style="animation-delay:3.3s"/>
+  <circle class="star l" cx="14" cy="62" r=".36" style="animation-delay:.5s"/>
+  <circle class="star g" cx="6"  cy="78" r=".3"  style="animation-delay:2s"/>
+  <circle class="star s" cx="91" cy="70" r=".28" style="animation-delay:1s"/>
+  <circle class="star g" cx="80" cy="86" r=".34" style="animation-delay:2.9s"/>
+  <circle class="star l" cx="20" cy="90" r=".3"  style="animation-delay:1.7s"/>
+  <circle class="star g" cx="55" cy="93" r=".26" style="animation-delay:.2s"/>
+</svg>
 
-  <div class="divider"></div>
+<div class="wrap">
 
-  <!-- ── GRUPO 1: PRÓXIMA AULA ── -->
-  <div class="section-label">✦ Próxima Aula</div>
-  <div class="links-group">
+  <section class="hero">
+    <span class="eyebrow">Sessão Temática de Divine Presence Healing</span>
+    <h1>Superando o Luto</h1>
+    <p class="subhead">Um espaço para acolheres, com a Presença Divina, o que a perda ainda não deixou repousar.</p>
+  </section>
 
-    <a class="link-btn highlight"
-       href="https://wa.me/351XXXXXXXXX?text=Olá+João+🤗+Quero+inscrever-me+nas+Aulas+de+Evolução+Divina!+Obrigado+🙏"
-       target="_blank">
-      <span class="urgency-tag">2 dias</span>
-      <span class="btn-icon">🧬</span>
-      <span class="btn-text">
-        <span class="btn-title">O DNA Divino</span>
-        <span class="btn-desc">Sexta, 13 Mar · 20h Lisboa · Inscrever via WhatsApp</span>
-      </span>
-      <span class="btn-arrow">›</span>
-    </a>
+  <section class="passage">
+    <div class="rule" aria-hidden="true"></div>
+    <div class="text">
+      <p>Há uma dor que não se explica, só se atravessa. A de perder alguém, ou algo, que fazia parte do teu chão.</p>
+      <p>Continuas a acordar, a trabalhar, a sorrir quando é preciso. Mas por dentro, há um silêncio que quase ninguém vê.</p>
+      <p>Tentamos ser fortes. Tentamos seguir em frente. Tentamos, tantas vezes, não sentir. E no entanto, a Alma sabe que o caminho não é esquecer — é integrar.</p>
+      <p class="revelation">&ldquo;O Luto é uma oportunidade de ouro para o teu verdadeiro Crescimento Espiritual.&rdquo;</p>
+      <p class="attrib-quote">— João Carlos Paliteiro —</p>
+      <p class="invite">Nesta Sessão totalmente canalizada e plena de Amor, Luz, Bênçãos e Compaixão, os Seres de Luz cuidam das feridas emocionais profundas ligadas à perda de alguém ou algo. Através da técnica canalizada Divine Presence Healing, toda a dor e desalento podem ser transmutados em Luz, Paz e Esperança.</p>
+      <p class="invite">Com dedicação, espaço e tempo, convido-te a momentos profundos de Cura e Renascimento, dentro do Campo vibracional dos Divinos Mestres da Luz Divina.</p>
+      <p class="blessing">Que encontres nesta Sessão a Paz que tanto precisas e mereces.</p>
+    </div>
+  </section>
 
-  </div>
+  <div class="divider" aria-hidden="true"><span>○</span></div>
 
-  <!-- ── GRUPO 2: BEYOND ── -->
-  <div class="section-label">✦ Beyond — Academia</div>
-  <div class="links-group">
+  <section class="info">
+    <h2>Como funciona esta Sessão</h2>
 
-    <a class="link-btn"
-       href="https://www.joaopaliteiro.com/português/beyond/beyond-aulas"
-       target="_blank">
-      <span class="btn-icon">🌟</span>
-      <span class="btn-text">
-        <span class="btn-title">Aulas de Evolução Divina</span>
-        <span class="btn-desc">Aulas extrafísicas canalizadas pelos Divinos Mestres</span>
-      </span>
-      <span class="btn-arrow">›</span>
-    </a>
+    <p class="session-desc">É um trabalho pessoal profundo de Cura e Limpeza Espiritual, libertando contratos e cargas emocionais ligadas à perda. A perda representa um acontecimento importante na nossa vida e, apesar de dolorosa, permite-nos um caminho de aproximação à nossa Essência Divina.</p>
 
-    <a class="link-btn"
-       href="https://www.joaopaliteiro.com/português/beyond"
-       target="_blank">
-      <span class="btn-icon">✨</span>
-      <span class="btn-text">
-        <span class="btn-title">Cursos Beyond</span>
-        <span class="btn-desc">Cura, Activação e Ascensão — online via Zoom</span>
-      </span>
-      <span class="btn-arrow">›</span>
-    </a>
+    <div class="subblock">
+      <span class="subsection-label">Chancela Espiritual</span>
+      <p class="session-desc">A Chancela, mentoria, proteção e Cura deste Tema são asseguradas pelos Mestres Saint Germain, Pórtia, Maria e Sananda — com o apoio de outros Seres de Luz, Anjos e Arcanjos que complementam este Trabalho de Luz.</p>
+    </div>
 
-  </div>
+    <div class="subblock">
+      <span class="subsection-label">Para Quem é Esta Sessão</span>
+      <p class="session-desc">Podes pedir esta Sessão para ti mesm@, ou em nome de alguém que esteja a viver um luto ou perda — presente ou passada — em relação a algo ou alguém que esteja vivo nesta dimensão, ou já noutra. A perda é algo muito pessoal: só tu podes dizer como te sentes em relação a ela. Que esta Sessão te ajude a desenvolver a Sabedoria interior para atravessares esse momento da melhor forma.</p>
+    </div>
 
-  <!-- ── GRUPO 3: SESSÃO ── -->
-  <div class="section-label">✦ Sessão Individual</div>
-  <div class="links-group">
+    <div class="meta-row">
+      <div class="meta">
+        <span class="label">Duração</span>
+        <span class="value">até 60 minutos</span>
+      </div>
+      <div class="meta">
+        <span class="label">Formato</span>
+        <span class="value">Ao Vivo no Zoom ou à Distância</span>
+      </div>
+      <div class="meta">
+        <span class="label">Com quem</span>
+        <span class="value">João Carlos Paliteiro</span>
+      </div>
+    </div>
 
-    <a class="link-btn"
-       href="https://wa.me/351XXXXXXXXX?text=Olá+João+🤗+Quero+marcar+uma+sessão+de+Divine+Presence+Healing.+Obrigado+🙏"
-       target="_blank">
-      <span class="btn-icon">🙏</span>
-      <span class="btn-text">
-        <span class="btn-title">Sessão Divine Presence Healing®</span>
-        <span class="btn-desc">Marcar sessão presencial ou online</span>
-      </span>
-      <span class="btn-arrow">›</span>
-    </a>
+    <div class="format-toggle" role="group" aria-label="Escolhe o formato da sessão">
+      <button type="button" data-format="presencial" aria-pressed="true">Ao Vivo no Zoom</button>
+      <button type="button" data-format="distancia" aria-pressed="false">À Distância</button>
+    </div>
 
-  </div>
+    <div class="launch-badge">✨ Oferta de Lançamento</div>
 
-  <!-- ── GRUPO 4: CONHECER ── -->
-  <div class="section-label">✦ Conhecer</div>
-  <div class="links-group">
+    <div class="price-line">
+      <span class="amount-old" id="priceOld">100€</span>
+      <span class="amount" id="priceAmount">80€</span>
+      <span class="note" id="priceNote">sessão única · ao vivo no Zoom</span>
+    </div>
 
-    <a class="link-btn"
-       href="https://www.joaopaliteiro.com/joão-carlos-paliteiro"
-       target="_blank">
-      <span class="btn-icon">☀️</span>
-      <span class="btn-text">
-        <span class="btn-title">Quem é João Carlos Paliteiro</span>
-        <span class="btn-desc">Canal da Luz Divina · 20 anos de missão</span>
-      </span>
-      <span class="btn-arrow">›</span>
-    </a>
+    <p class="launch-note">Válida de 17 a 27 de setembro — atravessando o Equinócio de Outono, o tempo do ano em que a Natureza também solta o que já cumpriu o seu ciclo.</p>
 
-    <a class="link-btn"
-       href="https://www.joaopaliteiro.com/português"
-       target="_blank">
-      <span class="btn-icon">🌐</span>
-      <span class="btn-text">
-        <span class="btn-title">Website Completo</span>
-        <span class="btn-desc">joaopaliteiro.com</span>
-      </span>
-      <span class="btn-arrow">›</span>
-    </a>
+    <p class="package-note">Pacote de 5 Sessões Temáticas: 400€ ao vivo no Zoom · 280€ à distância — válido também para combinares diferentes temas ao longo do teu processo, tais como Sessão de Cura com a Mãe ou com o Pai ou com a Criança Interior.</p>
 
-  </div>
+    <div class="cta">
+      <a class="primary" id="ctaWhats" href="#" target="_blank" rel="noopener">Pedir a minha Sessão &ldquo;Superando o Luto&rdquo; ✨</a>
+      <span class="microcopy">Vou responder-te pessoalmente, com todo o carinho.</span>
+      <span class="secondary">Preferes escrever com calma? <a id="ctaMail" href="#">Envia-me um email</a></span>
+    </div>
+  </section>
 
-  <!-- SOCIAL -->
-  <div class="social-row">
-    <a class="social-btn"
-       href="https://www.instagram.com/joao_carlos_paliteiro/"
-       target="_blank">
-      <span class="social-icon">📸</span> Instagram
-    </a>
-    <a class="social-btn"
-       href="https://wa.me/351XXXXXXXXX"
-       target="_blank">
-      <span class="social-icon">💬</span> WhatsApp
-    </a>
-    <a class="social-btn"
-       href="https://www.facebook.com/joaocarlospaliteiro"
-       target="_blank">
-      <span class="social-icon">🔵</span> Facebook
-    </a>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    <div class="footer-quote">"A Presença é o Caminho."</div>
-    <div class="footer-copy">© 2004–2026 · João Carlos Paliteiro · All rights reserved</div>
-  </div>
+  <footer>
+    <span class="cred">+20 anos de experiência · +15.000 atendimentos pessoais</span>
+    <span class="sig">Com Amor, João Carlos</span>
+    <span class="sig-sub">Canal dos Mestres da Luz Divina</span>
+  </footer>
 
 </div>
+
+<script>
+(function(){
+  var PHONE = "351933416434";
+  var EMAIL = "jcpaliteiro@gmail.com";
+  var prices = { presencial: { old: "100€", amount: "80€", note: "sessão única · ao vivo no Zoom" },
+                 distancia:  { old: "70€",  amount: "56€", note: "sessão única · à distância" } };
+
+  var buttons = document.querySelectorAll(".format-toggle button");
+  var oldEl = document.getElementById("priceOld");
+  var amountEl = document.getElementById("priceAmount");
+  var noteEl = document.getElementById("priceNote");
+  var ctaWhats = document.getElementById("ctaWhats");
+  var ctaMail = document.getElementById("ctaMail");
+
+  function buildMessage(format){
+    var formatLabel = format === "presencial" ? "Ao Vivo no Zoom" : "à distância";
+    var price = prices[format].amount;
+    return "Olá João, gostaria de marcar a Sessão \"Superando o Luto\" (formato: " + formatLabel + ", " + price + " — Oferta de Lançamento). O meu nome é: ";
+  }
+
+  function updateLinks(format){
+    var msg = buildMessage(format);
+    ctaWhats.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg);
+    ctaMail.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Sessão \"Superando o Luto\"") + "&body=" + encodeURIComponent(msg);
+  }
+
+  function setFormat(format){
+    oldEl.textContent = prices[format].old;
+    amountEl.textContent = prices[format].amount;
+    noteEl.textContent = prices[format].note;
+    buttons.forEach(function(b){
+      b.setAttribute("aria-pressed", b.dataset.format === format ? "true" : "false");
+    });
+    updateLinks(format);
+  }
+
+  buttons.forEach(function(b){
+    b.addEventListener("click", function(){ setFormat(b.dataset.format); });
+  });
+
+  setFormat("presencial");
+})();
+</script>
+
 </body>
 </html>
