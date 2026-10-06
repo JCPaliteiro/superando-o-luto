@@ -511,6 +511,7 @@
   @media (prefers-reduced-motion: reduce){
     .starfield .star{ animation: none; opacity: .3; }
   }
+  [hidden]{display:none !important;}
 </style>
 </head>
 <body>
@@ -596,15 +597,15 @@
       <button type="button" data-format="distancia" aria-pressed="false">À Distância</button>
     </div>
 
-    <div class="launch-badge">✨ Oferta de Lançamento</div>
+    <div class="launch-badge" id="launchBadge" hidden>✨ Oferta de Lançamento</div>
 
     <div class="price-line">
-      <span class="amount-old" id="priceOld">100€</span>
-      <span class="amount" id="priceAmount">80€</span>
+      <span class="amount-old" id="priceOld" hidden>100€</span>
+      <span class="amount" id="priceAmount">100€</span>
       <span class="note" id="priceNote">sessão única · ao vivo no Zoom</span>
     </div>
 
-    <p class="launch-note">Válida de 17 a 27 de setembro — atravessando o Equinócio de Outono, o tempo do ano em que a Natureza também solta o que já cumpriu o seu ciclo.</p>
+    <p class="launch-note" id="launchNote" hidden>Válida de 17 a 27 de setembro — atravessando o Equinócio de Outono, o tempo do ano em que a Natureza também solta o que já cumpriu o seu ciclo.</p>
 
     <p class="package-note">Pacote de 5 Sessões Temáticas: 400€ ao vivo no Zoom · 280€ à distância — válido também para combinares diferentes temas ao longo do teu processo, tais como Sessão de Cura com a Mãe ou com o Pai ou com a Criança Interior.</p>
 
@@ -640,8 +641,16 @@
 (function(){
   var PHONE = "351933416434";
   var EMAIL = "jcpaliteiro@gmail.com";
-  var prices = { presencial: { old: "100€", amount: "80€", note: "sessão única · ao vivo no Zoom", duration: "até 60 minutos" },
-                 distancia:  { old: "70€",  amount: "56€", note: "sessão única · à distância", duration: "normalmente menos de 60 minutos" } };
+  // OFERTA: para uma nova promoção basta mudar a data-limite e os valores "promo".
+  // Depois do prazo, o badge, o preço riscado e a nota desaparecem sozinhos.
+  var PROMO_DEADLINE = new Date("2026-09-28T00:00:00+01:00"); // fim de 27 set (Lisboa)
+  var promoActive = new Date() < PROMO_DEADLINE;
+  var prices = { presencial: { normal: "100€", promo: "80€", note: "sessão única · ao vivo no Zoom", duration: "até 60 minutos" },
+                 distancia:  { normal: "70€",  promo: "56€", note: "sessão única · à distância", duration: "normalmente menos de 60 minutos" } };
+  ["launchBadge","launchNote","priceOld"].forEach(function(id){
+    var el = document.getElementById(id); if (el) el.hidden = !promoActive;
+  });
+  function currentPrice(format){ return promoActive ? prices[format].promo : prices[format].normal; }
 
   var buttons = document.querySelectorAll(".format-toggle button");
   var oldEl = document.getElementById("priceOld");
@@ -653,8 +662,8 @@
 
   function buildMessage(format){
     var formatLabel = format === "presencial" ? "Ao Vivo no Zoom" : "à distância";
-    var price = prices[format].amount;
-    return "Olá João, gostaria de marcar a Sessão \"Superando o Luto\" (formato: " + formatLabel + ", " + price + " — Oferta de Lançamento). O meu nome é: ";
+    var price = currentPrice(format);
+    return "Olá João, gostaria de marcar a Sessão \"Superando o Luto\" (formato: " + formatLabel + ", " + price + (promoActive ? " — Oferta de Lançamento" : "") + "). O meu nome é: ";
   }
 
   function updateLinks(format){
@@ -664,8 +673,8 @@
   }
 
   function setFormat(format){
-    oldEl.textContent = prices[format].old;
-    amountEl.textContent = prices[format].amount;
+    oldEl.textContent = prices[format].normal;
+    amountEl.textContent = currentPrice(format);
     noteEl.textContent = prices[format].note;
     durationEl.textContent = prices[format].duration;
     buttons.forEach(function(b){
